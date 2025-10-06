@@ -82,6 +82,89 @@ Este repositorio contiene mi **ecosistema completo de desarrollo**, que incluye:
 - Enlaces a redes sociales
 - Estado de disponibilidad
 
+## 📥 **Instalación Completa del Ecosystem**
+
+### � **Requisitos Previos**
+Antes de comenzar, asegúrate de tener instalado:
+- **Node.js** (v16 o superior): https://nodejs.org/
+- **Git**: https://git-scm.com/
+- **Angular CLI** (para AppVeterinaria): `npm install -g @angular/cli`
+- **MongoDB** (opcional, para desarrollo local): https://www.mongodb.com/
+
+### �🔄 **Paso 1: Clonar el Portfolio Principal**
+```powershell
+# Clonar el repositorio principal
+git clone https://github.com/Gatroxm/portafolio.git
+cd portafolio
+
+# Instalar dependencias del portfolio
+npm install
+```
+
+### 📦 **Paso 2: Clonar los Subproyectos**
+```powershell
+# Clonar ProjetHub (SaaS Platform)
+git clone https://github.com/Gatroxm/ProjectHub.git ProjetHub
+
+# Clonar AppControl (Diabetes Management)
+git clone https://github.com/Gatroxm/AppControl.git AppControl
+
+# Clonar AppVeterinaria (Veterinary System)
+git clone https://github.com/Gatroxm/AppVeterinaria.git AppVeterinaria
+```
+
+### ⚙️ **Paso 3: Instalar Dependencias de cada Proyecto**
+```powershell
+# ProjetHub - Frontend y Backend
+cd ProjetHub
+npm install
+cd frontend && npm install
+cd ../backend && npm install
+cd ../..
+
+# AppControl - Client y Server
+cd AppControl
+npm install
+cd client && npm install
+cd ../server && npm install
+cd ../..
+
+# AppVeterinaria - Frontend y Backend
+cd AppVeterinaria/frontend && npm install
+cd ../backend && npm install
+cd ../..
+```
+
+### 🚀 **Paso 4: Ejecutar Todo el Ecosystem**
+```powershell
+# ¡Listo! Ahora ejecuta todo con un comando
+.\start-all.ps1
+```
+
+### 📁 **Estructura Final Esperada**
+```
+portafolio/                          # ← Repositorio principal
+├── src/                             # Portfolio Vue.js
+├── ProjetHub/                       # ← Clonar aquí
+│   ├── frontend/                    # React frontend
+│   └── backend/                     # Node.js API
+├── AppControl/                      # ← Clonar aquí
+│   ├── client/                      # React frontend  
+│   └── server/                      # Node.js API
+├── AppVeterinaria/                  # ← Clonar aquí
+│   ├── frontend/                    # Angular frontend
+│   └── backend/                     # Node.js API
+├── start-all.ps1                    # Script principal
+├── check-projects.ps1               # Verificador
+└── README.md                        # Esta documentación
+```
+
+### ⚡ **Instalación Rápida (Una sola línea)**
+```powershell
+# Para usuarios avanzados - Clonar todo automáticamente
+git clone https://github.com/Gatroxm/portafolio.git && cd portafolio && git clone https://github.com/Gatroxm/ProjectHub.git ProjetHub && git clone https://github.com/Gatroxm/AppControl.git AppControl && git clone https://github.com/Gatroxm/AppVeterinaria.git AppVeterinaria && npm install
+```
+
 ## ⚡ Inicio Rápido
 
 ### 🚀 **ECOSYSTEM COMPLETO** (Recomendado)
