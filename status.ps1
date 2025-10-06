@@ -35,16 +35,19 @@ function Test-SystemRequirements {
             try {
                 if ($req.Command -eq "powershell") {
                     $version = $PSVersionTable.PSVersion.Major
-                } else {
+                }
+                else {
                     $versionOutput = & $req.Command $req.Version.Split(' ') 2>$null
                     $version = $versionOutput | Select-Object -First 1
                 }
                 
                 Write-Host " ✅ $version" -ForegroundColor Green
-            } catch {
+            }
+            catch {
                 Write-Host " ⚠️  Instalado (versión desconocida)" -ForegroundColor Yellow
             }
-        } else {
+        }
+        else {
             Write-Host " ❌ No instalado" -ForegroundColor Red
             $allPassed = $false
         }
@@ -111,9 +114,11 @@ function Test-Dependencies {
     foreach ($dep in $mainDeps) {
         if ($package.dependencies.$dep) {
             Write-Host "    ✅ $dep ($($package.dependencies.$dep))" -ForegroundColor Green
-        } elseif ($package.devDependencies.$dep) {
+        }
+        elseif ($package.devDependencies.$dep) {
             Write-Host "    ✅ $dep ($($package.devDependencies.$dep)) [dev]" -ForegroundColor Green
-        } else {
+        }
+        else {
             Write-Host "    ❌ $dep - FALTANTE" -ForegroundColor Red
         }
     }
@@ -122,9 +127,11 @@ function Test-Dependencies {
     foreach ($dep in $devDeps) {
         if ($package.devDependencies.$dep) {
             Write-Host "    ✅ $dep ($($package.devDependencies.$dep))" -ForegroundColor Green
-        } elseif ($package.dependencies.$dep) {
+        }
+        elseif ($package.dependencies.$dep) {
             Write-Host "    ✅ $dep ($($package.dependencies.$dep)) [prod]" -ForegroundColor Green
-        } else {
+        }
+        else {
             Write-Host "    ⚠️  $dep - opcional" -ForegroundColor Yellow
         }
     }
@@ -133,7 +140,8 @@ function Test-Dependencies {
     if (Test-Path "node_modules") {
         $nodeModulesCount = (Get-ChildItem "node_modules" -Directory).Count
         Write-Host "  📁 node_modules: $nodeModulesCount paquetes instalados" -ForegroundColor Green
-    } else {
+    }
+    else {
         Write-Host "  ❌ node_modules no encontrado - ejecutar 'npm install'" -ForegroundColor Red
     }
     
@@ -201,11 +209,13 @@ function Test-BuildCapability {
                 $sizeFormatted = [math]::Round($totalSize, 2)
                 Write-Host "    📊 $($distFiles.Count) archivos generados ($sizeFormatted MB)" -ForegroundColor Cyan
             }
-        } else {
+        }
+        else {
             Write-Host " ❌ Build falló" -ForegroundColor Red
             Write-Host "    Error: $($output | Select-Object -Last 3)" -ForegroundColor Red
         }
-    } catch {
+    }
+    catch {
         Write-Host " ❌ Error ejecutando build" -ForegroundColor Red
     }
     
@@ -262,7 +272,8 @@ function Show-HealthSummary($systemOk, $structureOk, $depsOk, $scriptsOk, $build
             Write-Host "  • Revisar errores de build y dependencias" -ForegroundColor White
         }
         Write-Host ""
-    } else {
+    }
+    else {
         Write-Host "🎉 ¡Todo está perfecto! Listo para desarrollo y deploy." -ForegroundColor Green
         Write-Host ""
         Write-Host "🚀 PRÓXIMOS PASOS SUGERIDOS:" -ForegroundColor Cyan

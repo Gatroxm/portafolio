@@ -18,31 +18,35 @@
               ¿Quién soy?
             </h3>
             <p class="text-secondary-700 leading-relaxed">
-              Soy un desarrollador web Full Stack especializado en las tecnologías 
-              <strong>MERN</strong> (MongoDB, Express, React, Node.js) y 
-              <strong>MEVN</strong> (MongoDB, Express, Vue.js, Node.js), con una sólida 
-              experiencia en el desarrollo de aplicaciones web modernas y escalables.
+              Soy <strong>Gabriel Troncoso</strong>, desarrollador web Full Stack con amplia experiencia 
+              en tecnologías modernas como <strong>JavaScript, TypeScript, React, Vue.js, Angular, Node.js</strong> 
+              y <strong>MongoDB</strong>. Me especializo en crear soluciones web escalables y de alto rendimiento.
             </p>
             <p class="text-secondary-700 leading-relaxed">
-              Mi enfoque se centra en la creación de aplicaciones web eficientes, 
-              manteniendo siempre las mejores prácticas de desarrollo y un código 
-              limpio y mantenible. Me apasiona aprender nuevas tecnologías y 
-              aplicarlas en proyectos que generen impacto real.
+              Mi trayectoria incluye el desarrollo de sistemas complejos como plataformas SaaS multi-tenant, 
+              sistemas de gestión hospitalaria, aplicaciones de control de salud y herramientas de estimación 
+              con inteligencia artificial. Me apasiona transformar ideas en productos digitales funcionales 
+              que generen valor real para los usuarios.
+            </p>
+            <p class="text-secondary-700 leading-relaxed">
+              Cuento con certificaciones en <strong>desarrollo web completo</strong>, <strong>JavaScript moderno</strong>, 
+              <strong>React avanzado</strong> y <strong>Node.js</strong>. Mi enfoque se basa en código limpio, 
+              arquitecturas escalables y las mejores prácticas de desarrollo.
             </p>
           </div>
           
           <!-- Stats -->
           <div class="grid grid-cols-3 gap-6 pt-6">
             <div class="text-center">
-              <div class="text-2xl font-bold text-primary-600">4+</div>
+              <div class="text-2xl font-bold text-primary-600">5+</div>
               <div class="text-sm text-secondary-600">Años de Experiencia</div>
             </div>
             <div class="text-center">
-              <div class="text-2xl font-bold text-primary-600">20+</div>
+              <div class="text-2xl font-bold text-primary-600">25+</div>
               <div class="text-sm text-secondary-600">Proyectos Completados</div>
             </div>
             <div class="text-center">
-              <div class="text-2xl font-bold text-primary-600">15+</div>
+              <div class="text-2xl font-bold text-primary-600">20+</div>
               <div class="text-sm text-secondary-600">Tecnologías</div>
             </div>
           </div>
@@ -85,26 +89,26 @@ const timeline = [
   {
     id: 1,
     title: 'Desarrollador Full Stack Senior',
-    period: '2023 - Presente',
-    description: 'Lidero el desarrollo de aplicaciones SaaS multi-tenant con Vue.js, Node.js y MongoDB Atlas.'
+    period: '2024 - Presente',
+    description: 'Desarrollo de ProjectHub, plataforma SaaS multi-tenant con estimaciones IA, Next.js y MongoDB Atlas.'
   },
   {
     id: 2,
     title: 'Desarrollador Full Stack',
-    period: '2021 - 2023',
-    description: 'Desarrollo de sistemas de gestión empresarial con React, Angular y Node.js.'
+    period: '2022 - 2024',
+    description: 'Sistemas de gestión: App Veterinaria (Angular), App Control salud (React), Admin Hospitales (Vue.js).'
   },
   {
     id: 3,
-    title: 'Desarrollador Frontend',
-    period: '2020 - 2021',
-    description: 'Especialización en interfaces de usuario modernas con Vue.js y React.'
+    title: 'Especialización en JavaScript',
+    period: '2021 - 2022',
+    description: 'Certificaciones en JavaScript ES6+, React avanzado, Node.js y desarrollo web completo.'
   },
   {
     id: 4,
-    title: 'Inicio en Desarrollo Web',
-    period: '2019 - 2020',
-    description: 'Primeros pasos en desarrollo web con HTML, CSS, JavaScript y PHP.'
+    title: 'Inicio Profesional',
+    period: '2019 - 2021',
+    description: 'Primeros proyectos profesionales con HTML5, CSS3, JavaScript, PHP y bases de datos relacionales.'
   }
 ]
 </script>

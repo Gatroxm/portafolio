@@ -9,33 +9,31 @@
           Una selección de mis trabajos más recientes y significativos
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-        <div v-for="project in projects" 
-             :key="project.id"
-             class="card group hover:scale-105 transform transition-all duration-300" 
-             data-aos="fade-up" 
-             :data-aos-delay="project.id * 100">
+        <div v-for="project in projects" :key="project.id"
+          class="card group hover:scale-105 transform transition-all duration-300" data-aos="fade-up"
+          :data-aos-delay="project.id * 100">
           <!-- Project Image -->
           <div class="relative overflow-hidden rounded-lg mb-6">
-            <img :src="project.image" 
-                 :alt="project.title"
-                 class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            
+            <img :src="project.image" :alt="project.title"
+              class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
+
             <!-- Project Status -->
             <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 text-xs font-medium rounded-full"
-                    :class="project.status === 'Completado' 
-                      ? 'bg-green-100 text-green-800' 
-                      : project.status === 'En Desarrollo' 
-                        ? 'bg-yellow-100 text-yellow-800'
-                        : 'bg-blue-100 text-blue-800'">
+              <span class="px-3 py-1 text-xs font-medium rounded-full" :class="project.status === 'Completado'
+                ? 'bg-green-100 text-green-800'
+                : project.status === 'En Desarrollo'
+                  ? 'bg-yellow-100 text-yellow-800'
+                  : 'bg-blue-100 text-blue-800'">
                 {{ project.status }}
               </span>
             </div>
           </div>
-          
+
           <!-- Project Content -->
           <div class="space-y-4">
             <div>
@@ -46,43 +44,46 @@
                 {{ project.description }}
               </p>
             </div>
-            
+
             <!-- Tech Stack -->
             <div class="flex flex-wrap gap-2">
-              <span v-for="tech in project.technologies" 
-                    :key="tech"
-                    class="px-2 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded">
+              <span v-for="tech in project.technologies" :key="tech"
+                class="px-2 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded">
                 {{ tech }}
               </span>
             </div>
-            
+
             <!-- Features -->
             <div class="space-y-2">
               <h4 class="font-medium text-secondary-900 text-sm">Características principales:</h4>
               <ul class="space-y-1">
-                <li v-for="feature in project.features.slice(0, 3)" 
-                    :key="feature"
-                    class="text-xs text-secondary-600 flex items-center gap-2">
+                <li v-for="feature in project.features.slice(0, 3)" :key="feature"
+                  class="text-xs text-secondary-600 flex items-center gap-2">
                   <CheckIcon class="w-3 h-3 text-green-500 flex-shrink-0" />
                   {{ feature }}
                 </li>
               </ul>
             </div>
-            
+
             <!-- Actions -->
-            <div class="flex gap-3 pt-4">
-              <a :href="project.github" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 class="flex-1 bg-secondary-900 hover:bg-secondary-800 text-white text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-2">
+            <div class="flex gap-2 pt-4">
+              <!-- Ver en Vivo (Proyecto Ejecutándose) -->
+              <a :href="getProjectLiveUrl(project.id)" target="_blank" rel="noopener noreferrer"
+                class="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-1">
+                <PlayIcon class="w-4 h-4" />
+                En Vivo
+              </a>
+
+              <!-- Código GitHub -->
+              <a :href="project.github" target="_blank" rel="noopener noreferrer"
+                class="flex-1 bg-secondary-900 hover:bg-secondary-800 text-white text-center py-2 px-3 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-1">
                 <CodeBracketIcon class="w-4 h-4" />
                 Código
               </a>
-              <a v-if="project.demo" 
-                 :href="project.demo" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 class="flex-1 bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-2">
+
+              <!-- Demo alternativo si existe -->
+              <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer"
+                class="flex-1 bg-primary-600 hover:bg-primary-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-1">
                 <EyeIcon class="w-4 h-4" />
                 Demo
               </a>
@@ -90,13 +91,10 @@
           </div>
         </div>
       </div>
-      
+
       <!-- View More Projects -->
       <div class="text-center mt-12" data-aos="fade-up">
-        <a href="https://github.com/Gatroxm" 
-           target="_blank" 
-           rel="noopener noreferrer"
-           class="btn-secondary">
+        <a href="https://github.com/Gatroxm" target="_blank" rel="noopener noreferrer" class="btn-secondary">
           <ArrowTopRightOnSquareIcon class="w-5 h-5" />
           Ver todos mis proyectos en GitHub
         </a>
@@ -106,19 +104,32 @@
 </template>
 
 <script setup>
-import { 
-  CodeBracketIcon, 
-  EyeIcon, 
+import {
+  CodeBracketIcon,
+  EyeIcon,
   CheckIcon,
-  ArrowTopRightOnSquareIcon 
+  ArrowTopRightOnSquareIcon,
+  PlayIcon
 } from '@heroicons/vue/24/outline'
+
+// Mapeo de proyectos a URLs en vivo
+const projectLiveUrls = {
+  1: 'http://localhost:5173',  // Portfolio Principal
+  2: 'http://localhost:4000',  // App Veterinaria  
+  3: 'http://localhost:3001',  // App Control
+  4: 'http://localhost:3002'   // App Admin Hospitals
+}
+
+const getProjectLiveUrl = (projectId) => {
+  return projectLiveUrls[projectId] || '#'
+}
 
 const projects = [
   {
     id: 1,
     title: 'Project Hub',
     description: 'Plataforma SaaS Multi-Tenant para casas de desarrollo de software con estimaciones IA y gestión integral de proyectos.',
-    image: '/api/placeholder/400/200',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&auto=format',
     status: 'Activo',
     technologies: ['Next.js', 'Node.js', 'MongoDB Atlas', 'Docker'],
     features: [
@@ -134,7 +145,7 @@ const projects = [
     id: 2,
     title: 'App Veterinaria',
     description: 'Sistema completo de gestión veterinaria con autenticación JWT, roles de usuario y gestión de mascotas.',
-    image: '/api/placeholder/400/200',
+    image: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=400&h=200&fit=crop&auto=format',
     status: 'Completado',
     technologies: ['Angular', 'Node.js', 'MongoDB', 'TypeScript'],
     features: [
@@ -150,7 +161,7 @@ const projects = [
     id: 3,
     title: 'App Control',
     description: 'Sistema avanzado de control y monitoreo de salud, especializado en seguimiento de diabetes.',
-    image: '/api/placeholder/400/200',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=200&fit=crop&auto=format',
     status: 'Completado',
     technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
     features: [
@@ -166,7 +177,7 @@ const projects = [
     id: 4,
     title: 'App Admin Hospitals',
     description: 'Sistema integral para la administración de hospitales con gestión de pacientes, citas y recursos.',
-    image: '/api/placeholder/400/200',
+    image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?w=400&h=200&fit=crop&auto=format',
     status: 'En Desarrollo',
     technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Express'],
     features: [
