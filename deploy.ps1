@@ -1,4 +1,4 @@
-# 🚀 DEPLOY PORTAFOLIO - Gabriel Troncoso
+# 🚀 DEPLOY PORTAFOLIO - Gustavo Muñoz
 # Script para deployment del portafolio Vue.js a diferentes plataformas
 
 param(
@@ -15,7 +15,7 @@ function Write-Banner {
     Clear-Host
     Write-Host "╔══════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
     Write-Host "║                 🎯 PORTFOLIO DEPLOYMENT SCRIPT                   ║" -ForegroundColor Cyan  
-    Write-Host "║                     Gabriel Troncoso                            ║" -ForegroundColor Cyan
+    Write-Host "║                     Gustavo Muñoz                            ║" -ForegroundColor Cyan
     Write-Host "╚══════════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
     Write-Host ""
 }
@@ -384,5 +384,5 @@ else {
 }
 
 Write-Host ""
-Write-Host "📞 Contacto: gabriel.troncoso.dev@gmail.com" -ForegroundColor Cyan
+Write-Host "📞 Contacto: tavoxpau@gmail.com" -ForegroundColor Cyan
 Write-Host "🐙 GitHub: https://github.com/Gatroxm" -ForegroundColor Cyan

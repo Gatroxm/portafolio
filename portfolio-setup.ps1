@@ -1,7 +1,7 @@
 # 🚀 Inicializador del Portafolio
 # Script para configurar y verificar todos los proyectos del portafolio
 
-Write-Host "🎯 === GABRIEL TRONCOSO - PORTAFOLIO SETUP ===" -ForegroundColor Cyan
+Write-Host "🎯 === GUSTAVO MUÑOZ - PORTAFOLIO SETUP ===" -ForegroundColor Cyan
 Write-Host ""
 
 # Función para verificar si un comando existe
@@ -191,7 +191,7 @@ switch ($choice) {
 }
 
 Write-Host ""
-Write-Host "📞 Contacto: gabriel.troncoso.dev@gmail.com" -ForegroundColor Cyan
+Write-Host "📞 Contacto: tavoxpau@gmail.com" -ForegroundColor Cyan
 Write-Host "🐙 GitHub: https://github.com/Gatroxm" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "⭐ ¡No olvides dar estrella a los repositorios que te gusten!" -ForegroundColor Yellow

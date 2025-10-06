@@ -7,15 +7,15 @@
           <div class="space-y-4">
             <p class="text-primary-600 font-medium text-lg">¡Hola! Soy</p>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900">
-              Gabriel Troncoso
+              Gustavo Muñoz
             </h1>
             <p class="text-xl md:text-2xl text-gradient font-semibold">
               Desarrollador Full Stack
             </p>
             <p class="text-lg text-secondary-600 leading-relaxed max-w-2xl">
-              Con <strong>5+ años de experiencia</strong> creando soluciones web innovadoras. 
+              Con <strong>5+ años de experiencia</strong> creando soluciones web innovadoras.
               Especializado en <strong>JavaScript, TypeScript, React, Vue.js, Angular y Node.js</strong>.
-              He desarrollado plataformas SaaS, sistemas de gestión empresarial y aplicaciones de salud 
+              He desarrollado plataformas SaaS, sistemas de gestión empresarial y aplicaciones de salud
               que impactan positivamente a miles de usuarios.
             </p>
           </div>
@@ -51,9 +51,8 @@
 
             <!-- Profile image container -->
             <div class="relative bg-white p-4 rounded-full shadow-2xl">
-              <img
-                src="https://gatroxm.github.io/assets/img/FB_IMG_1618059924387.jpg"
-                alt="Gabriel Troncoso - Desarrollador Full Stack"
+              <img src="https://gatroxm.github.io/assets/img/FB_IMG_1618059924387.jpg"
+                alt="Gustavo Muñoz - Desarrollador Full Stack"
                 class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-lg">
             </div>
 

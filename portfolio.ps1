@@ -1,5 +1,5 @@
 # 🚀 PORTFOLIO COMPLETE DEPLOYMENT
-# Script unificado para el portafolio completo de Gabriel Troncoso
+# Script unificado para el portafolio completo de Gustavo Muñoz
 
 param(
     [ValidateSet("dev", "build", "deploy-netlify", "deploy-vercel", "deploy-aws", "deploy-github", "full-deploy")]
@@ -11,10 +11,10 @@ param(
 function Show-Welcome {
     Clear-Host
     Write-Host "╔══════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║                 🎯 GABRIEL TRONCOSO PORTFOLIO                    ║" -ForegroundColor Cyan
-    Write-Host "║                      Complete Deployment                        ║" -ForegroundColor Cyan
+    Write-Host "║                 🎯 GUSTAVO MUÑOZ PORTFOLIO                      ║" -ForegroundColor Cyan
+    Write-Host "║                      Complete Deployment                         ║" -ForegroundColor Cyan
     Write-Host "║                                                                  ║" -ForegroundColor Cyan
-    Write-Host "║  Vue.js 3 + Tailwind + Vite + Multi-Platform Deploy            ║" -ForegroundColor Cyan
+    Write-Host "║  Vue.js 3 + Tailwind + Vite + Multi-Platform Deploy              ║" -ForegroundColor Cyan
     Write-Host "╚══════════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
     Write-Host ""
 }
@@ -380,5 +380,5 @@ switch ($Action) {
 Write-Host ""
 Write-Host "🎉 Operación completada!" -ForegroundColor Green
 Write-Host ""
-Write-Host "📞 Gabriel Troncoso - gabriel.troncoso.dev@gmail.com" -ForegroundColor Cyan
+Write-Host "📞 GUSTAVO MUÑOZ - tavoxpau@gmail.com" -ForegroundColor Cyan
 Write-Host "🐙 GitHub: https://github.com/Gatroxm" -ForegroundColor Cyan

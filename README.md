@@ -1,4 +1,4 @@
-# 🎯 Gabriel Troncoso - Portfolio & Development Ecosystem
+# 🎯 GUSTAVO MUÑOZ - Portfolio & Development Ecosystem
 
 [![Port### 🚀 Portfolio Principal (Recomendado)
 ```bash
@@ -84,25 +84,61 @@ Este repositorio contiene mi **ecosistema completo de desarrollo**, que incluye:
 
 ## ⚡ Inicio Rápido
 
-### � Portfolio (Recomendado)
-```bash
-# Script unificado - ¡La forma más fácil!
-.\portfolio.ps1
-
-# O manualmente:
-npm install
-npm run dev  # http://localhost:5173
+### 🚀 **ECOSYSTEM COMPLETO** (Recomendado)
+```powershell
+# ¡Ejecutar TODAS las aplicaciones de una vez!
+.\start-all.ps1
 ```
 
-### 🔧 Backend Job Scraper API
-```bash
-cd jobscraper-backend
-npm install
-npm start    # http://localhost:5000/api/swagger
+**Esto iniciará:**
+- 📱 **Portfolio Principal**: http://localhost:5173 (Auto-abre)
+- 🏢 **ProjetHub Frontend**: http://localhost:3000
+- ⚡ **ProjetHub Backend**: http://localhost:5000 (API)
+- 💉 **AppControl Frontend**: http://localhost:3001  
+- 🔧 **AppControl Backend**: http://localhost:5001 (API)
+- 🐕 **AppVeterinaria Frontend**: http://localhost:4200
+
+### 📋 **COMANDOS INDIVIDUALES**
+
+#### Portfolio Principal
+```powershell
+# Solo el portfolio (más rápido)
+npm run dev                    # http://localhost:5173
+.\open-portfolio-simple.ps1    # Abrir portfolio directamente
 ```
 
-### ☁️ Deploy Automático
-```bash
+#### ProjetHub (SaaS Platform)
+```powershell
+cd ProjetHub
+npm run dev                    # Frontend: http://localhost:3000
+npm run backend:dev           # Backend API: http://localhost:5000
+```
+
+#### AppControl (Diabetes Management)
+```powershell
+cd AppControl  
+npm run client                # Frontend: http://localhost:3001
+npm run server                # Backend API: http://localhost:5001
+```
+
+#### AppVeterinaria (Veterinary Management)
+```powershell
+cd AppVeterinaria\frontend
+ng serve --port 4200          # Frontend: http://localhost:4200
+```
+
+### 🔍 **VERIFICACIÓN Y DIAGNÓSTICO**
+```powershell
+# Verificar estado de todos los servicios
+.\check-projects.ps1
+
+# Reiniciar todo si hay problemas
+Get-Process *node* | Stop-Process -Force
+.\start-all.ps1
+```
+
+### ☁️ **DEPLOYMENT**
+```powershell
 # Deploy completo a múltiples plataformas
 .\deploy.ps1
 
@@ -112,6 +148,32 @@ npm start    # http://localhost:5000/api/swagger
 # Deploy de todos los proyectos
 .\master-deploy.ps1
 ```
+
+## 🌐 **Servicios y Puertos**
+
+| **Aplicación** | **Tipo** | **Puerto** | **URL** | **Estado** |
+|----------------|----------|------------|---------|------------|
+| **Portfolio Principal** | Frontend (Vue.js) | 5173 | http://localhost:5173 | ✅ Principal |
+| **ProjetHub Frontend** | Frontend (React) | 3000 | http://localhost:3000 | ✅ Activo |
+| **ProjetHub Backend** | API (Node.js) | 5000 | http://localhost:5000 | ⚙️ Backend |
+| **AppControl Frontend** | Frontend (React) | 3001 | http://localhost:3001 | ✅ Activo |
+| **AppControl Backend** | API (Node.js) | 5001 | http://localhost:5001 | ⚙️ Backend |
+| **AppVeterinaria** | Frontend (Angular) | 4200 | http://localhost:4200 | ✅ Activo |
+
+### 📝 **Archivos de Configuración**
+- `.env` - Configuración principal de puertos
+- `ProjetHub/frontend/.env` - Config frontend ProjetHub
+- `ProjetHub/backend/.env` - Config backend ProjetHub  
+- `AppControl/client/.env` - Config frontend AppControl
+- `AppControl/server/.env` - Config backend AppControl
+- `AppVeterinaria/.env` - Config AppVeterinaria
+
+### ⚡ **Scripts Disponibles**
+- `start-all.ps1` - Iniciar todo el ecosystem
+- `check-projects.ps1` - Verificar estado de servicios
+- `open-portfolio-simple.ps1` - Abrir solo el portfolio
+- `ecosystem-simple.ps1` - Launcher alternativo
+- `ecosystem-launcher.ps1` - Launcher avanzado
 
 ## 🛠️ Stack Tecnológico Completo
 
@@ -139,7 +201,7 @@ npm start    # http://localhost:5000/api/swagger
 ## 📁 Estructura Completa del Proyecto
 
 ```
-📂 Gabriel Troncoso Portfolio Ecosystem/
+📂 GUSTAVO MUÑOZ Portfolio Ecosystem/
 │
 ├── 🎨 PORTFOLIO PRINCIPAL (Vue.js 3 en raíz)
 │   ├── src/
@@ -318,6 +380,44 @@ Este repositorio también incluye otros proyectos complementarios:
 
 ¿Quieres contribuir? ¡Perfecto!
 
+## 🚨 **Troubleshooting**
+
+### **Problema: Puertos ocupados**
+```powershell
+# Detener todos los procesos Node.js
+Get-Process *node* | Stop-Process -Force
+```
+
+### **Problema: Un servicio no inicia**
+```powershell
+# Verificar estado individual
+.\check-projects.ps1
+
+# Reinstalar dependencias si es necesario
+cd [nombre-proyecto]
+rm -rf node_modules
+npm install
+```
+
+### **Problema: Portfolio no se abre automáticamente**
+```powershell
+# Abrir portfolio manualmente
+.\open-portfolio-simple.ps1
+
+# O ir directo a la URL
+# http://localhost:5173
+```
+
+### **Problema: Angular CLI no encontrado**
+```powershell
+# Instalar Angular CLI globalmente
+npm install -g @angular/cli
+```
+
+## 🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! Por favor:
+
 1. Fork del repositorio
 2. Crea tu feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
@@ -330,12 +430,18 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 📞 Contacto
 
-**Gabriel Troncoso** - Desarrollador Full Stack
+**GUSTAVO MUÑOZ** - Desarrollador Full Stack
 
-- 📧 **Email**: gabriel.troncoso.dev@gmail.com  
-- 🐙 **GitHub**: [@Gatroxm](https://github.com/Gatroxm)
-- 💼 **LinkedIn**: [Gabriel Troncoso](https://linkedin.com/in/gabriel-troncoso-dev)
-- 🌐 **Portfolio**: [gabriel-troncoso.netlify.app](https://gabriel-troncoso.netlify.app)
+- 📧 **Email**: tavoxpau@gmail.com  
+- � **WhatsApp**: +57 313 397 69 99
+- �🐙 **GitHub**: [@Gatroxm](https://github.com/Gatroxm)
+- 💼 **LinkedIn**: [GUSTAVO MUÑOZ](https://www.linkedin.com/in/gustavo-adolfo-mu%C3%B1oz-reyes-a277b587/)
+
+### 🎯 **URLs del Ecosystem en Desarrollo**
+- 🌟 **Portfolio**: http://localhost:5173
+- 🏢 **ProjetHub**: http://localhost:3000
+- 💉 **AppControl**: http://localhost:3001
+- 🐕 **AppVeterinaria**: http://localhost:4200
 
 ##  Licencia
 
@@ -347,6 +453,12 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 **⭐ Si este proyecto te ayudó, ¡dale una estrella!**
 
-*Desarrollado con ❤️ por Gabriel Troncoso*
+*Desarrollado con ❤️ por Gustavo Muñoz*
+
+### 🎯 **Comando Principal para Iniciar Todo:**
+```powershell
+.\start-all.ps1
+```
+*¡Un solo comando, todo el ecosystem funcionando!*
 
 </div>

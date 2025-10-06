@@ -114,8 +114,8 @@ import {
 
 // Mapeo de proyectos a URLs en vivo
 const projectLiveUrls = {
-  1: 'http://localhost:5173',  // Portfolio Principal
-  2: 'http://localhost:4000',  // App Veterinaria  
+  1: 'http://localhost:3000',  // Portfolio Principal
+  2: 'http://localhost:4200',  // App Veterinaria
   3: 'http://localhost:3001',  // App Control
   4: 'http://localhost:3002'   // App Admin Hospitals
 }

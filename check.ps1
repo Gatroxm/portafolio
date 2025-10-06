@@ -2,7 +2,7 @@
 param([switch]$Quick)
 
 Clear-Host
-Write-Host "=== GABRIEL TRONCOSO PORTFOLIO STATUS ===" -ForegroundColor Cyan
+Write-Host "=== GUSTAVO MUÑOZ PORTFOLIO STATUS ===" -ForegroundColor Cyan
 Write-Host ""
 
 # Verificar Node.js

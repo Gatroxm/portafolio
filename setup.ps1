@@ -1,4 +1,4 @@
-# 🚀 GABRIEL TRONCOSO PORTFOLIO - SETUP INICIAL
+# 🚀 GUSTAVO MUÑOZ PORTFOLIO - SETUP INICIAL
 # Script para configurar el entorno completo de desarrollo
 
 param(
@@ -10,7 +10,7 @@ param(
 function Show-Welcome {
     Clear-Host
     Write-Host "╔══════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║                    🎯 GABRIEL TRONCOSO                           ║" -ForegroundColor Cyan
+    Write-Host "║                    🎯 GUSTAVO MUÑOZ                           ║" -ForegroundColor Cyan
     Write-Host "║                   Portfolio Setup Wizard                        ║" -ForegroundColor Cyan
     Write-Host "║                                                                  ║" -ForegroundColor Cyan
     Write-Host "║     Configuración automática del entorno de desarrollo          ║" -ForegroundColor Cyan
@@ -218,5 +218,5 @@ switch ($choice) {
 }
 
 Write-Host ""
-Write-Host "📞 Contacto: gabriel.troncoso.dev@gmail.com" -ForegroundColor Cyan
+Write-Host "📞 Contacto: tavoxpau@gmail.com" -ForegroundColor Cyan
 Write-Host "🐙 GitHub: https://github.com/Gatroxm" -ForegroundColor Cyan

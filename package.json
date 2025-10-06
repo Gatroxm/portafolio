@@ -1,7 +1,7 @@
 {
-  "name": "gabriel-troncoso-portfolio",
+  "name": "gustavo-Muñoz-portfolio",
   "version": "1.0.0",
-  "description": "Portafolio profesional de Gabriel Troncoso - Desarrollador Full Stack con proyectos destacados",
+  "description": "Portafolio profesional de Gustavo Muñoz - Desarrollador Full Stack con proyectos destacados",
   "private": true,
   "scripts": {
     "dev": "vite",

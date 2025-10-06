@@ -288,9 +288,9 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 📞 Contacto
 
-**Gabriel Troncoso** - Desarrollador Full Stack
+**Gustavo Muñoz** - Desarrollador Full Stack
 - 🐙 GitHub: [@Gatroxm](https://github.com/Gatroxm)
-- 📧 Email: [tu-email@ejemplo.com]
+- 📧 Email: [tavoxpau@gmail.com]
 
 ---
 

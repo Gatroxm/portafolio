@@ -1,4 +1,4 @@
-# 🚀 GABRIEL TRONCOSO - ECOSYSTEM LAUNCHER
+# 🚀 GUSTAVO MUÑOZ - ECOSYSTEM LAUNCHER
 # Script para ejecutar todos los proyectos del ecosistema
 
 param(
@@ -10,7 +10,7 @@ param(
 function Show-Header {
     Clear-Host
     Write-Host "╔════════════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║                    🌟 GABRIEL TRONCOSO ECOSYSTEM                       ║" -ForegroundColor Cyan
+    Write-Host "║                    🌟 GUSTAVO MUÑOZ ECOSYSTEM                       ║" -ForegroundColor Cyan
     Write-Host "║                     Launcher de Todos los Proyectos                   ║" -ForegroundColor Cyan
     Write-Host "╚════════════════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
     Write-Host ""
@@ -159,7 +159,7 @@ export const projects = [
   {
     id: 'veterinaria',
     name: 'App Veterinaria', 
-    url: 'http://localhost:4000',
+    url: 'http://localhost:4200',
     type: 'Angular',
     description: 'Sistema completo de gestión veterinaria'
   },
@@ -197,7 +197,7 @@ function Show-FinalInstructions {
     Write-Host "🌟 URLS PRINCIPALES:" -ForegroundColor Cyan
     Write-Host "   📱 Portfolio Principal: http://localhost:5173" -ForegroundColor White
     Write-Host "   🏢 ProjetHub: http://localhost:3000" -ForegroundColor White  
-    Write-Host "   🐕 App Veterinaria: http://localhost:4000" -ForegroundColor White
+    Write-Host "   🐕 App Veterinaria: http://localhost:4200" -ForegroundColor White
     Write-Host "   ❤️ App Control: http://localhost:3001" -ForegroundColor White
     Write-Host "   🏥 App Hospitals: http://localhost:3002" -ForegroundColor White
     Write-Host ""

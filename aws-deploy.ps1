@@ -1,4 +1,4 @@
-# 🚀 AWS DEPLOYMENT - Portafolio Gabriel Troncoso
+# 🚀 AWS DEPLOYMENT - Portafolio Gustavo Muñoz
 # Script especializado para deploy a AWS S3 + CloudFront
 
 param(
@@ -12,7 +12,7 @@ param(
 function Write-Header {
     Write-Host "╔══════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
     Write-Host "║                     ☁️ AWS DEPLOYMENT                            ║" -ForegroundColor Cyan
-    Write-Host "║                   Gabriel Troncoso Portfolio                    ║" -ForegroundColor Cyan
+    Write-Host "║                   Gustavo Muñoz Portfolio                        ║" -ForegroundColor Cyan
     Write-Host "╚══════════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
     Write-Host ""
 }
@@ -277,4 +277,4 @@ if (-not [string]::IsNullOrWhiteSpace($CloudFrontId)) {
 Show-DeploymentInfo -BucketName $BucketName -CloudFrontId $CloudFrontId
 
 Write-Host ""
-Write-Host "📞 Soporte: gabriel.troncoso.dev@gmail.com" -ForegroundColor Cyan
+Write-Host "📞 Soporte: tavoxpau@gmail.com" -ForegroundColor Cyan

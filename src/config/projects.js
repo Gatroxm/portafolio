@@ -1,4 +1,4 @@
-// Configuración de proyectos del ecosistema Gabriel Troncoso
+// Configuración de proyectos del ecosistema de desarrollo Gustavo Muñoz
 export const projects = [
     {
         id: 'portfolio',
@@ -33,7 +33,7 @@ export const projects = [
     {
         id: 'veterinaria',
         name: 'App Veterinaria',
-        url: 'http://localhost:4000',
+        url: 'http://localhost:4200',
         type: 'Angular',
         description: 'Sistema completo de gestión veterinaria',
         status: 'Completado',

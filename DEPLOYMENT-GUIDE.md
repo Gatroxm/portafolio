@@ -1,4 +1,4 @@
-# 📋 GUÍA DE DEPLOYMENT - Portafolio Gabriel Troncoso
+# 📋 GUÍA DE DEPLOYMENT - Portafolio GUSTAVO MUÑOZ
 
 Este documento explica cómo usar todos los scripts de automatización del portafolio.
 
@@ -162,7 +162,7 @@ Si tienes problemas con algún script:
 3. **Revisa los logs** en la consola para errores específicos
 4. **Verifica conectividad** a GitHub y MongoDB
 
-**Contacto:** gabriel.troncoso.dev@gmail.com
+**Contacto:** tavoxpau@gmail.com
 
 ---
 

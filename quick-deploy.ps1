@@ -1,4 +1,4 @@
-# 🚀 QUICK DEPLOY - Portafolio Gabriel Troncoso
+# 🚀 QUICK DEPLOY - Portafolio Gustavo Muñoz
 # Script rápido para deploy cuando todos los proyectos estén listos
 
 Write-Host "🎯 === QUICK DEPLOY PORTAFOLIO ===" -ForegroundColor Cyan
@@ -70,7 +70,7 @@ foreach ($project in $projects) {
 ✨ Proyecto completado y optimizado
 📝 Documentación actualizada  
 🚀 Listo para producción
-🎯 Parte del portafolio de Gabriel Troncoso" 2>$null
+🎯 Parte del portafolio de GUSTAVO MUÑOZ" 2>$null
 
             # Push (si hay cambios)
             git push 2>$null
@@ -94,7 +94,7 @@ Write-Host "📋 Desplegando portafolio principal..." -ForegroundColor Magenta
 
 try {
     git add .
-    git commit -m "feat: Portafolio profesional Gabriel Troncoso
+    git commit -m "feat: Portafolio profesional GUSTAVO MUÑOZ
 
 🎯 Desarrollador Full Stack especializado en:
 - Frontend: Vue.js, Angular, React
@@ -135,5 +135,5 @@ Write-Host "  🐾 App Veterinaria: https://github.com/Gatroxm/AppVeterinaria" -
 Write-Host "  📊 App Control: https://github.com/Gatroxm/AppControl" -ForegroundColor White
 Write-Host "  🚀 Project Hub: https://github.com/Gatroxm/ProjectHub" -ForegroundColor White
 Write-Host ""
-Write-Host "📞 Contacto: gabriel.troncoso.dev@gmail.com" -ForegroundColor Cyan
+Write-Host "📞 Contacto: tavoxpau@gmail.com" -ForegroundColor Cyan
 Write-Host "⭐ No olvides dar estrella a los repositorios!" -ForegroundColor Yellow

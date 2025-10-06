@@ -1,4 +1,4 @@
-# 🚀 PORTAFOLIO GABRIEL TRONCOSO - DEPLOY COMPLETO
+# 🚀 PORTAFOLIO GUSTAVO MUÑOZ - DEPLOY COMPLETO
 # Script maestro para automatizar todo el proceso del portafolio
 
 param(
@@ -14,7 +14,7 @@ $ErrorActionPreference = "Continue"
 function Write-Banner {
     Clear-Host
     Write-Host "╔══════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║                  🎯 GABRIEL TRONCOSO PORTAFOLIO                  ║" -ForegroundColor Cyan  
+    Write-Host "║                  🎯 GUSTAVO MUÑOZ PORTAFOLIO                  ║" -ForegroundColor Cyan  
     Write-Host "║                    Deployment Master Script                      ║" -ForegroundColor Cyan
     Write-Host "╚══════════════════════════════════════════════════════════════════╝" -ForegroundColor Cyan
     Write-Host ""
@@ -475,7 +475,7 @@ Write-Host ""
 Write-Host "╔══════════════════════════════════════════════════════════════════╗" -ForegroundColor Cyan
 Write-Host "║                        🎯 DEPLOY FINALIZADO                      ║" -ForegroundColor Cyan
 Write-Host "║                                                                  ║" -ForegroundColor Cyan
-Write-Host "║  📧 gabriel.troncoso.dev@gmail.com                               ║" -ForegroundColor Cyan
+Write-Host "║  📧 tavoxpau@gmail.com                               ║" -ForegroundColor Cyan
 Write-Host "║  🐙 github.com/Gatroxm                                           ║" -ForegroundColor Cyan
 Write-Host "║                                                                  ║" -ForegroundColor Cyan
 Write-Host "║            ⭐ Dale estrella a los repos! ⭐                      ║" -ForegroundColor Cyan

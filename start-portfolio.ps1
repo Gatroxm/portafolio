@@ -1,4 +1,4 @@
-Write-Host "🌟 GABRIEL TRONCOSO ECOSYSTEM LAUNCHER" -ForegroundColor Cyan
+Write-Host "🌟 GUSTAVO MUÑOZ ECOSYSTEM LAUNCHER" -ForegroundColor Cyan
 Write-Host "=====================================" -ForegroundColor Gray
 Write-Host ""
 

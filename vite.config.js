@@ -9,6 +9,12 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  server: {
+    port: 5173,
+    host: true,
+    strictPort: true,
+    open: true
+  },
   base: './',
   build: {
     outDir: 'dist',

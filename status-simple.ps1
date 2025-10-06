@@ -10,7 +10,7 @@ function Show-Header {
     Clear-Host
     Write-Host "╔══════════════════════════════════════════════════════════════════╗" -ForegroundColor Blue
     Write-Host "║                      🔍 PORTFOLIO STATUS                        ║" -ForegroundColor Blue
-    Write-Host "║                   Gabriel Troncoso - Health Check               ║" -ForegroundColor Blue
+    Write-Host "║                   Gustavo Muñoz - Health Check               ║" -ForegroundColor Blue
     Write-Host "╚══════════════════════════════════════════════════════════════════╝" -ForegroundColor Blue
     Write-Host ""
 }

@@ -9,7 +9,7 @@
           Desarrollador apasionado por crear soluciones tecnológicas innovadoras
         </p>
       </div>
-      
+
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Text Content -->
         <div class="space-y-6" data-aos="fade-right">
@@ -18,23 +18,24 @@
               ¿Quién soy?
             </h3>
             <p class="text-secondary-700 leading-relaxed">
-              Soy <strong>Gabriel Troncoso</strong>, desarrollador web Full Stack con amplia experiencia 
-              en tecnologías modernas como <strong>JavaScript, TypeScript, React, Vue.js, Angular, Node.js</strong> 
+              Soy <strong>Gustavo Muñoz</strong>, desarrollador web Full Stack con amplia experiencia
+              en tecnologías modernas como <strong>JavaScript, TypeScript, React, Vue.js, Angular, Node.js</strong>
               y <strong>MongoDB</strong>. Me especializo en crear soluciones web escalables y de alto rendimiento.
             </p>
             <p class="text-secondary-700 leading-relaxed">
-              Mi trayectoria incluye el desarrollo de sistemas complejos como plataformas SaaS multi-tenant, 
-              sistemas de gestión hospitalaria, aplicaciones de control de salud y herramientas de estimación 
-              con inteligencia artificial. Me apasiona transformar ideas en productos digitales funcionales 
+              Mi trayectoria incluye el desarrollo de sistemas complejos como plataformas SaaS multi-tenant,
+              sistemas de gestión hospitalaria, aplicaciones de control de salud y herramientas de estimación
+              con inteligencia artificial. Me apasiona transformar ideas en productos digitales funcionales
               que generen valor real para los usuarios.
             </p>
             <p class="text-secondary-700 leading-relaxed">
-              Cuento con certificaciones en <strong>desarrollo web completo</strong>, <strong>JavaScript moderno</strong>, 
-              <strong>React avanzado</strong> y <strong>Node.js</strong>. Mi enfoque se basa en código limpio, 
+              Cuento con certificaciones en <strong>desarrollo web completo</strong>, <strong>JavaScript
+                moderno</strong>,
+              <strong>React avanzado</strong> y <strong>Node.js</strong>. Mi enfoque se basa en código limpio,
               arquitecturas escalables y las mejores prácticas de desarrollo.
             </p>
           </div>
-          
+
           <!-- Stats -->
           <div class="grid grid-cols-3 gap-6 pt-6">
             <div class="text-center">
@@ -51,21 +52,20 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Experience Timeline -->
         <div class="space-y-6" data-aos="fade-left">
           <h3 class="text-2xl font-semibold text-secondary-900 mb-8">
             Mi Trayectoria
           </h3>
-          
+
           <div class="space-y-6">
-            <div v-for="item in timeline" 
-                 :key="item.id"
-                 class="relative pl-8 pb-6 last:pb-0">
+            <div v-for="item in timeline" :key="item.id" class="relative pl-8 pb-6 last:pb-0">
               <!-- Timeline line -->
-              <div class="absolute left-0 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow-lg"></div>
+              <div class="absolute left-0 top-2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow-lg">
+              </div>
               <div class="absolute left-2 top-6 w-0.5 bg-secondary-200 h-full last:hidden"></div>
-              
+
               <!-- Content -->
               <div class="bg-secondary-50 p-4 rounded-lg">
                 <div class="flex justify-between items-start mb-2">
