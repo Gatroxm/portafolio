@@ -108,8 +108,8 @@
             <button type="submit" :disabled="isSubmitting"
               class="w-full btn-primary justify-center disabled:opacity-50 disabled:cursor-not-allowed">
               <PaperAirplaneIcon class="w-5 h-5" />
-              <span v-if="!isSubmitting">Enviar Mensaje</span>
-              <span v-else>Enviando...</span>
+              <span v-if="!isSubmitting">Enviar por WhatsApp</span>
+              <span v-else>Abriendo WhatsApp...</span>
             </button>
           </form>
         </div>
@@ -189,11 +189,26 @@ const socialLinks = [
 const sendMessage = async () => {
   isSubmitting.value = true
 
-  // Simular envío del formulario
+  // Crear mensaje estructurado para WhatsApp
+  const message = `*Contacto desde Portfolio Web*%0A%0A` +
+    `👤 *Nombre:* ${form.value.name}%0A` +
+    `📧 *Email:* ${form.value.email}%0A` +
+    `📋 *Asunto:* ${form.value.subject}%0A%0A` +
+    `💬 *Mensaje:*%0A${form.value.message}%0A%0A` +
+    `-----------------------------%0A` +
+    `Enviado desde: gustavo-munoz-portfolio.com`
+
+  // Abrir WhatsApp con el mensaje pre-escrito
+  const whatsappURL = `https://wa.me/573133976999?text=${message}`
+
+  // Simular tiempo de procesamiento y abrir WhatsApp
   setTimeout(() => {
-    alert('¡Mensaje enviado! Te contactaré pronto.')
+    window.open(whatsappURL, '_blank')
+
+    // Mostrar mensaje de confirmación y limpiar formulario
+    alert('¡Redirigiendo a WhatsApp! El mensaje se ha preparado para ti.')
     form.value = { name: '', email: '', subject: '', message: '' }
     isSubmitting.value = false
-  }, 2000)
+  }, 1000)
 }
 </script>
