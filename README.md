@@ -101,38 +101,50 @@ cd portafolio
 npm install
 ```
 
-### 📦 **Paso 2: Clonar los Subproyectos**
+### 📦 **Paso 2: Clonar los Subproyectos (IMPORTANTE)**
+
+> **⚠️ NOTA**: Estos proyectos NO están incluidos en este repositorio. Cada uno tiene su propio repositorio independiente y debe clonarse por separado.
+
+#### **🏢 ProjetHub (SaaS Platform)**
 ```powershell
-# Clonar ProjetHub (SaaS Platform)
+# Clonar en la carpeta ProjetHub
 git clone https://github.com/Gatroxm/ProjectHub.git ProjetHub
-
-# Clonar AppControl (Diabetes Management)
-git clone https://github.com/Gatroxm/AppControl.git AppControl
-
-# Clonar AppVeterinaria (Veterinary System)
-git clone https://github.com/Gatroxm/AppVeterinaria.git AppVeterinaria
+cd ProjetHub
+npm install                    # Dependencias raíz
+cd frontend && npm install     # Frontend React
+cd ../backend && npm install   # Backend Node.js/NestJS
+cd ../..
 ```
 
-### ⚙️ **Paso 3: Instalar Dependencias de cada Proyecto**
+#### **💉 AppControl (Health Management)**
 ```powershell
-# ProjetHub - Frontend y Backend
-cd ProjetHub
-npm install
-cd frontend && npm install
-cd ../backend && npm install
-cd ../..
-
-# AppControl - Client y Server
+# Clonar en la carpeta AppControl  
+git clone https://github.com/Gatroxm/AppControl.git AppControl
 cd AppControl
-npm install
-cd client && npm install
-cd ../server && npm install
+npm install                    # Dependencias raíz
+cd client && npm install       # Frontend React
+cd ../server && npm install    # Backend Node.js/Express
 cd ../..
+```
 
-# AppVeterinaria - Frontend y Backend
-cd AppVeterinaria/frontend && npm install
-cd ../backend && npm install
+#### **🐕 AppVeterinaria (Veterinary System)**
+```powershell
+# Clonar en la carpeta AppVeterinaria
+git clone https://github.com/Gatroxm/AppVeterinaria.git AppVeterinaria
+cd AppVeterinaria/frontend && npm install    # Frontend Angular
+cd ../backend && npm install                 # Backend Node.js
 cd ../..
+```
+
+### 🔧 **Paso 3: Verificar Instalación**
+```powershell
+# Verificar que todas las carpetas existen
+dir | Where-Object {$_.Name -match "Projet|App"}
+
+# Debería mostrar:
+# - ProjetHub/
+# - AppControl/
+# - AppVeterinaria/
 ```
 
 ### 🚀 **Paso 4: Ejecutar Todo el Ecosystem**
@@ -232,6 +244,102 @@ Get-Process *node* | Stop-Process -Force
 .\master-deploy.ps1
 ```
 
+## 🔄 **CI/CD con GitHub Actions y AWS**
+
+### 🚀 **Configuración de Integración Continua**
+
+> **💡 Concepto**: Cada vez que haces push a cualquier repositorio, se despliega automáticamente a AWS
+
+#### **📋 Estructura CI/CD Recomendada:**
+
+```
+Portfolio Principal (este repo)
+├── .github/workflows/
+│   └── deploy-portfolio.yml     # Despliega a AWS S3 + CloudFront
+│
+ProjetHub/
+├── .github/workflows/
+│   ├── deploy-frontend.yml      # Despliega React a S3
+│   └── deploy-backend.yml       # Despliega API a AWS ECS/EC2
+│
+AppControl/
+├── .github/workflows/
+│   ├── deploy-frontend.yml      # Despliega React a S3
+│   └── deploy-backend.yml       # Despliega API a AWS ECS/EC2
+│
+AppVeterinaria/
+├── .github/workflows/
+│   ├── deploy-frontend.yml      # Despliega Angular a S3
+│   └── deploy-backend.yml       # Despliega API a AWS ECS/EC2
+```
+
+#### **⚙️ Configuración AWS Required:**
+
+1. **AWS S3** - Para frontends estáticos
+2. **AWS CloudFront** - CDN para el portfolio
+3. **AWS ECS/Fargate** - Para backends/APIs
+4. **AWS RDS** - Base de datos MongoDB/MySQL
+5. **AWS Route53** - DNS personalizado
+6. **GitHub Actions** - CI/CD automatizado
+
+#### **🔐 Secrets de GitHub Necesarios:**
+
+```yaml
+# En cada repositorio, agregar estos secrets:
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY  
+AWS_REGION
+AWS_S3_BUCKET_NAME
+AWS_CLOUDFRONT_DISTRIBUTION_ID
+```
+
+### 📄 **Ejemplo: GitHub Action para Portfolio**
+
+```yaml
+# .github/workflows/deploy-portfolio.yml
+name: Deploy Portfolio to AWS
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Deploy to S3
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+        
+    - name: Sync to S3
+      run: |
+        aws s3 sync dist/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+```
+
+### 🎯 **Workflow Recomendado:**
+
+1. **Desarrollo Local**: `.\start-all.ps1`
+2. **Git Push**: `git push origin main`
+3. **Auto Deploy**: GitHub Actions → AWS
+4. **Live Update**: Tu web se actualiza automáticamente
+
 ## 🌐 **Servicios y Puertos**
 
 | **Aplicación** | **Tipo** | **Puerto** | **URL** | **Estado** |
@@ -257,6 +365,31 @@ Get-Process *node* | Stop-Process -Force
 - `open-portfolio-simple.ps1` - Abrir solo el portfolio
 - `ecosystem-simple.ps1` - Launcher alternativo
 - `ecosystem-launcher.ps1` - Launcher avanzado
+
+### 📁 **Configuración .gitignore**
+
+> **🔥 IMPORTANTE**: Este repositorio NO incluye las carpetas de los subproyectos
+
+**¿Por qué?**
+- ✅ **Independencia**: Cada proyecto mantiene su propio historial de Git
+- ✅ **Flexibilidad**: Puedes actualizar proyectos individuales sin afectar otros
+- ✅ **CI/CD**: Cada proyecto puede tener su propio pipeline de despliegue
+- ✅ **Colaboración**: Diferentes equipos pueden trabajar en diferentes proyectos
+
+**Carpetas excluidas en .gitignore:**
+```gitignore
+# Proyectos independientes (repositorios separados)
+ProjetHub/
+AppControl/
+AppVeterinaria/
+AppAdminHospitals/
+```
+
+**⚠️ Esto significa que:**
+- Debes clonar cada proyecto por separado (ver instrucciones arriba)
+- Los cambios en subproyectos no afectan este repositorio principal
+- Cada proyecto mantiene su propio control de versiones
+- Perfect para CI/CD independiente por proyecto
 
 ## 🛠️ Stack Tecnológico Completo
 

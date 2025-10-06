@@ -18,6 +18,43 @@ yarn-error.log*
 .DS_Store?
 ._*
 .Spotlight-V100
+
+# ===============================================
+# PROYECTOS INDEPENDIENTES (Repositorios Separados)
+# ===============================================
+# Estos proyectos tienen sus propios repositorios de Git
+# y se deben clonar por separado según las instrucciones del README.md
+
+# ProjetHub - SaaS Platform
+ProjetHub/
+ProjectHub/
+
+# AppControl - Health Management System  
+AppControl/
+
+# AppVeterinaria - Veterinary Management System
+AppVeterinaria/
+
+# AppAdminHospitals - Hospital Administration
+AppAdminHospitals/
+
+# Cualquier otra carpeta de proyecto futuro
+App*/
+*Hub/
+*Control/
+*Admin*/
+
+# ===============================================
+# ARCHIVOS TEMPORALES DE DESARROLLO
+# ===============================================
+# Logs y archivos temporales de los scripts
+*.log
+*.tmp
+*.temp
+
+# Backups automáticos
+*.backup
+*.bak
 .Trashes
 ehthumbs.db
 Thumbs.db
