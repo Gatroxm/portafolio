@@ -1,6 +1,6 @@
 # 🎯 GUSTAVO MUÑOZ - Portfolio & Development Ecosystem
 
-[![Port### 🚀 Portfolio Principal (Recomendado)
+### 🚀 Portfolio Principal (Recomendado)
 ```bash
 # ¡Método más rápido con script unificado!
 .\portfolio.ps1
