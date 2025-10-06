@@ -18,7 +18,9 @@ npm run build            # Build de producción
 
 # Setup inicial si es necesario
 .\setup.ps1
-```mg.shields.io/badge/Portfolio-Live-success?style=flat&logo=vue.js)](https://gabriel-troncoso.netlify.app)
+```
+
+[![Portfolio Live](https://img.shields.io/badge/Portfolio-Live-success?style=flat&logo=vue.js)](https://gustavo-munoz-portfolio.netlify.app)
 [![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vue.js&logoColor=white)](https://vuejs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)

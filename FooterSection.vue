@@ -121,7 +121,7 @@ const socialLinks = [
     },
     {
         name: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/gabriel-troncoso',
+        href: 'https://www.linkedin.com/in/gustavo-adolfo-mu%C3%B1oz-reyes-a277b587/',
         icon: LinkedInIcon
     },
     {
