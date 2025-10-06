@@ -26,16 +26,17 @@ yarn-error.log*
 # y se deben clonar por separado según las instrucciones del README.md
 
 # ProjetHub - SaaS Platform
-ProjetHub/
-ProjectHub/
+/ProjetHub/
+/ProjectHub/
 
 # AppControl - Health Management System  
-AppControl/
+/AppControl/
 
 # AppVeterinaria - Veterinary Management System
-AppVeterinaria/
+/AppVeterinaria/
 
 # AppAdminHospitals - Hospital Administration
+/AppAdminHospitals/
 AppAdminHospitals/
 
 # Cualquier otra carpeta de proyecto futuro
